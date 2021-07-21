@@ -1,1 +1,1 @@
-web:java $JAVA_OPTS -cp target/classes:target/dependency/* com.example.segsw --port $PORT target/*.jar
+web:java $JAVA_OPTS -cp target/classes:target/dependency/* com.example.segsw --server.port=$PORT target/*.jar
