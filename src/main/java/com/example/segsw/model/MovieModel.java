@@ -1,6 +1,9 @@
 package com.example.segsw.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Range;
 
 import javax.persistence.*;
@@ -11,6 +14,9 @@ import javax.validation.constraints.Size;
 @Table(name = "movies")
 @Entity
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class MovieModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

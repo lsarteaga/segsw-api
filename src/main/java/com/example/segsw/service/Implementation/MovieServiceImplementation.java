@@ -46,9 +46,10 @@ public class MovieServiceImplementation implements MovieService {
     }
 
     @Override
-    public void deleteMovie(long id) {
+    public String deleteMovie(long id) {
         movieRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Movie", "id", id));
         movieRepository.deleteById(id);
+        return "Movie deleted";
     }
 }
 

@@ -42,7 +42,7 @@ public class MovieController {
 
     @DeleteMapping("/{id}/delete")
     public ResponseEntity<String> deleteMovie(@PathVariable(name = "id") long id) {
-        movieService.deleteMovie(id);
-        return new ResponseEntity<>("Movie deleted", HttpStatus.OK);
+
+        return new ResponseEntity<>(movieService.deleteMovie(id), HttpStatus.OK);
     }
 }
